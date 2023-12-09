@@ -1,0 +1,13 @@
+<!-- app/templates/update_author.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Update Author</h2>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ author.name }}" required><br>
+
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" required>{{ author.bio }}</textarea><br>
+
+        <label for="nationality">Nationality:</label>

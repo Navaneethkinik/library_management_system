@@ -1,0 +1,14 @@
+<!-- app/templates/index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Authors</h2>
+    <ul>
+        {% for author in authors %}
+            <li>
+                {{ author.name }} - {{ author.bio }} - {{ author.nationality }}
+                <a href="{{ url_for('update_author', author_id=author.author_id) }}">Update</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
